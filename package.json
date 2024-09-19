@@ -1,0 +1,12 @@
+{
+  "name": "awssampleapp",
+  "version": "1.0.0",
+  "description": "# aws_code_deploy ## Steps for AWS Sample App  1.  **Create IAM Roles - CodeDeploy & EC2CodeDeploy**  1.  **Create EC2 instance with the following software packages should install**<br/>  1.  **Choose AMI: Amazon Linux 2**<br/>      ![alt text](https://github.com/prabhakar2020/aws_code_deploy/blob/master/AMI.png)<br/>  1.  **Choose AMI role as EC2CodeDeploy**<br/>      ![alt text](https://github.com/prabhakar2020/aws_code_deploy/blob/master/ConfigureInstance.png)<br/>  1.  **Choose User Data: for installing required packages.**<br/>  2.  ```      #!/bin/bash      sudo yum -y update      sudo yum -y install ruby      sudo yum -y install wget      cd /home/ec2-user      wget https://aws-codedeploy-eu-central-1.s3.eu-central-1.amazonaws.com/latest/install      sudo chmod +x ./install      sudo ./install auto      sudo yum install -y python-pip      sudo pip install awscli      ```",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
